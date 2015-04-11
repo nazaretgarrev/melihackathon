@@ -1,2 +1,5 @@
 # melihackathon
-Hackathon Mercado Libre Uruguay [Nazaret García]
+
+Easy Selling Website 1.0
+
+<nazaret.gar.rev@gmail.com>
