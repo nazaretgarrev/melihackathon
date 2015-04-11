@@ -1,5 +1,5 @@
 # melihackathon
 
-Easy Selling Website 1.0
+Easy Selling Website
 
-<nazaret.gar.rev@gmail.com>
+nazaret.gar.rev@gmail.com
