@@ -1,12 +1,1005 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-	<title>{page_title}</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/nuevos-estilos.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="dist/css/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="bower_components/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
+
 <body>
-	<!-- BEGIN module_content -->
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0; margin-left:250px;">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="index.html">Easy Selling</a> 
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <!--
+                <li class="dropdown">
+                    <a class="dropdown-toggle color-icono" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                
+                    </li>
+                -->
+                    <!-- /.dropdown-messages -->
+                
+                <!-- /.dropdown -->
+
+                <!--
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle color-icono" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Auto 1</strong>
+                                        <span class="pull-right text-muted">90% Alta</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Auto 2</strong>
+                                        <span class="pull-right text-muted">20% Baja</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Auto 3</strong>
+                                        <span class="pull-right text-muted">60% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Auto 4</strong>
+                                        <span class="pull-right text-muted">80% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Tasks</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    </li>
+                -->
+
+                    <!-- /.dropdown-tasks -->
+                
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle color-icono" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i>Nuevos comentarios
+                                    <span class="pull-right text-muted small">4</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-user fa-fw"></i>Nuevas visitas
+                                    <span class="pull-right text-muted small">23 </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Mensajes recibidos
+                                    <span class="pull-right text-muted small">1</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> Actualizaciones pendientes
+                                    <span class="pull-right text-muted small">7</span>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Ver todas las alertas</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle color-icono" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> Perfil de Usuario</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configuración</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Cerrar Sesión</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <!-- MENU LATERAL IZQUIERDO
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Buscar...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                           
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Carga de Nuevo Producto</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="flot.html">Flot Charts</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">Morris.js Charts</a>
+                                </li>
+                            </ul>
+                            
+                        </li>
+                        <li>
+                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                        </li>
+                        <li>
+                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="panels-wells.html">Panels and Wells</a>
+                                </li>
+                                <li>
+                                    <a href="buttons.html">Buttons</a>
+                                </li>
+                                <li>
+                                    <a href="notifications.html">Notifications</a>
+                                </li>
+                                <li>
+                                    <a href="typography.html">Typography</a>
+                                </li>
+                                <li>
+                                    <a href="icons.html"> Icons</a>
+                                </li>
+                                <li>
+                                    <a href="grid.html">Grid</a>
+                                </li>
+                            </ul>
+                            
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Second Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Second Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Third Level <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                    </ul>
+                                    
+                                </li>
+                            </ul>
+                            
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            -->
+            <!-- /.navbar-static-side -->
+
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <h1 class="page-header">Carga de Nuevo Producto</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-car fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">Vehículos</div>
+                                    <div>Autos, Motos, Naútica.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">Seleccionar Categoría</span>
+                                <span class="pull-right"><i class="fa fa-chevron-circle-down"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-grey">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-home fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">Inmuebles</div>
+                                    <div>Casas, Deptos, Terrenos.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">Seleccionar Categoría</span>
+                                <span class="pull-right"><i class="fa fa-chevron-circle-down"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-grey">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-user-md fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">Servicios</div>
+                                    <div>Música, Hogar, Viajes.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">Seleccionar Categoría</span>
+                                <span class="pull-right"><i class="fa fa-chevron-circle-down"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-grey">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-cubes fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">Otros</div>
+                                    <div>Celulares, Cámaras, Deportes.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">Seleccionar Categoría</span>
+                                <span class="pull-right"><i class="fa fa-chevron-circle-down"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+                <div class="col-lg-8">
+
+                    <div class="panel-body">
+                            <div class="panel-group" id="accordion-1">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne-0">1. <i class="fa fa-tasks fa-fw"></i> Elección de categoría</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne-0" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <p><strong>Seleccioná las categorías que mejor se adapten a tu producto:</strong></p>
+                                            <div class="form-group col-lg-6">
+                                                <label>Categorías: *</label>
+                                                <select class="form-control form-control-mitad">
+                                                    <option>Autos de Colección</option>
+                                                    <option>Autos y Camionetas</option>
+                                                    <option>Camiones</option>
+                                                    <option>Motos</option>
+                                                    <option>Náutica</option>
+                                                    <option>Planes de Ahorro</option>
+                                                    <option>Otros Vehículos</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-lg-6">
+                                                <label>Sub-Categorías: *</label>
+                                                <select class="form-control form-control-mitad">
+                                                    <option>Autos de Colección</option>
+                                                    <option>Autos y Camionetas</option>
+                                                    <option>Camiones</option>
+                                                    <option>Motos</option>
+                                                    <option>Náutica</option>
+                                                    <option>Planes de Ahorro</option>
+                                                    <option>Otros Vehículos</option>
+                                                </select>
+                                            </div>
+                                        </div> <!-- panel body -->
+                                    </div>
+                                </div>
+                            </div> <!-- cierre de 1er acordión -->
+
+
+
+
+                            <div class="panel-group" id="accordion-1"> <!-- 2do ACORDION -->
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne-1">2. <i class="fa fa-file-text fa-fw"></i> Descripción del producto</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne-1" class="panel-collapse collapse">
+                                        <div class="panel-body">
+
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                             <!-- <div id="morris-area-chart"></div>  -->
+                             <h3>Ingresa fotos de tu vehículo</h3>
+                                <p>¡Tu producto es el protagonista! No incluyas logos, banners, textos promocionales, bordes ni marcas de agua.<br/>Arrastra tus fotos para ordenarlas. <span><i class="fa fa-question-circle"></i></span></p>
+
+                                <img src="img/fotos-auto/1.jpg">
+                                <img src="img/fotos-auto/2.jpg">
+                                <img src="img/fotos-auto/3.jpg">
+                                <img src="img/fotos-auto/4.jpg">
+                                <img src="img/fotos-auto/5.jpg">
+                                <img src="img/fotos-auto/6.jpg">
+                                <img src="img/fotos-auto/7.jpg"><br/>
+                                <img src="img/fotos-auto/8.jpg">
+                                <img src="img/fotos-auto/8.jpg">
+                                <img src="img/fotos-auto/8.jpg">
+                                <img src="img/fotos-auto/8.jpg">
+                                <img src="img/fotos-auto/8.jpg">
+                                <img src="img/fotos-auto/8.jpg">
+                                <img src="img/fotos-auto/8.jpg">
+
+
+                            <h3 class="espacio-superior">Ingresa un video</h3>
+                            <form role="form">
+                                <div class="form-group">
+                                    <label>Link de YouTube:</label>
+                                    <input class="form-control form-control-mitad">
+                                    <p class="help-block">Ingresa el link de tu video de YouTube.</p>
+                                </div>
+
+                            <h3 class="espacio-superior">Ubicación de tu vehículo</h3>
+                                <div class="form-group">
+                                            <label>Ciudad: *</label>
+                                            <select class="form-control form-control-mitad">
+                                                <option>elegir</option>
+                                                <option>Canelones</option>
+                                                <option>Montevideo</option>
+                                                <option>Maldonado</option>
+                                                <option>San José</option>             
+                                            </select>
+                                </div>
+                            <h3 class="espacio-superior">Teléfono de contacto</h3>
+                                <div class="form-group">
+                                    <label>Número de teléfono:</label>
+                                    <input class="form-control form-control-mitad">
+                                    <p class="help-block">[ código de área ] + [ número ]</p>
+                                </div>
+                            
+
+                                <div class="panel panel-default espacio-superior">
+                        <div class="panel-heading">
+                            <h4>Descripción del vehículo</h4>
+                        </div>
+                        <!-- .panel-heading -->
+                        <div class="panel-body">
+                            
+                                <div class="form-group">
+                                    <label>Combustible: *</label>
+                                        <select class="form-control form-control-mitad">
+                                            <option>Elegir</option>
+                                            <option>Diesel</option>
+                                            <option>Nafta</option>
+                                            <option>Nafta/Gnc</option>
+                                        </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Cant. de puertas: *</label>
+                                        <select class="form-control form-control-mitad">
+                                            <option>Elegir</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Kilómetros: *</label>
+                                    <input class="form-control form-control-mitad">
+                                </div>
+                                <div class="form-group">
+                                    <label>Modelo: *</label>
+                                    <input class="form-control form-control-mitad">
+                                </div>
+                                <div class="form-group">
+                                    <label>Año: *</label>
+                                        <select class="form-control form-control-mitad">
+                                            <option>Elegir</option>
+                                            <option>2014</option>
+                                            <option>2013</option>
+                                            <option>2012</option>
+                                            <option>2011</option>
+                                            <option>...</option>
+                                        </select>
+                                </div>
+
+
+                            <div class="panel-group" id="accordion-1-1">
+                                <div class="panel panel-default espacio-superior">
+                                    <div class="panel-heading ">
+                                        <h4 class="panel-title ">
+                                            <a data-toggle="collapse" data-parent="#accordion-1-1" href="#collapseOne-1-1">Más especificaciones</a>
+                                            <span class="pull-right"><i class="fa fa-chevron-circle-down"></i></span>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne-1-1" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="form-group">
+                                                <label>Horario de contacto:</label>
+                                                <input class="form-control form-control-mitad">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Color:</label>
+                                                    <select class="form-control form-control-mitad">
+                                                        <option>Elegir</option>
+                                                        <option>Amarillo</option>
+                                                        <option>Azul</option>
+                                                        <option>Blanco</option>
+                                                        <option>Negro</option>
+                                                        <option>...</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Dirección:</label>
+                                                    <select class="form-control form-control-mitad">
+                                                        <option>Elegir</option>
+                                                        <option>Asistida</option>
+                                                        <option>Hidráulica</option>
+                                                        <option>Mecánica</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Unico dueño:</label>
+                                                    <select class="form-control form-control-mitad">
+                                                        <option>Elegir</option>
+                                                        <option>Si</option>
+                                                        <option>No</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Versión:</label>
+                                                <input class="form-control form-control-mitad">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Transmisión:</label>
+                                                    <select class="form-control form-control-mitad">
+                                                        <option>Elegir</option>
+                                                        <option>Automática</option>
+                                                        <option>Manual</option>
+                                                        <option>Secuencial</option>
+                                                        <option>Semiautomática</option>
+                                                    </select>
+                                            </div>
+
+                                            <div class="col-lg-12">
+                                                <div class="col-lg-4">
+                                                    <h4>Confort:</h4>
+                                                    <div class="checkbox">
+                                                        <label><input type="checkbox">Aire acondicionado</label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label><input type="checkbox">Espejos eléctricos</label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label><input type="checkbox">Radio</label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label><input type="checkbox">Tapizado de cuero</label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label><input type="checkbox">Techo corredizo</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4">
+                                                    <h4>Seguridad:</h4>
+                                                    <div class="checkbox">
+                                                        <label><input type="checkbox">Alarma</label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label><input type="checkbox">Apoya cabeza en asientos traseros</label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label><input type="checkbox">Faros antinieblas delanteros</label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label><input type="checkbox">Faros antinieblas traseros</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4">
+                                                    <h4>Exterior:</h4>
+                                                    <div class="checkbox">
+                                                        <label><input type="checkbox">Limpia/lava luneta</label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label><input type="checkbox">Llantas de aleación</label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label><input type="checkbox">Paragolpes pintados</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 espacio-superior">
+                                    <div class="form-group ">
+                                        <label>Título: *</label> <span><i class="fa fa-question-circle"></i></span></p>
+                                        <input class="form-control form-control" value="Ej: Volkswagen Golf Motor 2.0 2006 Azul, 5 puertas">
+                                        <p class="help-block">Puedes ingresar hasta 60 caracteres.</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Descripción:</label>
+                                        <textarea class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 espacio-superior">
+                                    <div class="panel panel-warning">
+                                        <div class="panel-heading">
+                                            Palabras claves sugeridas
+                                        </div>
+                                        <div class="panel-body">
+                                            <p style="font-size:11px;">Para el <strong>título</strong> se recomienda hacer uso de las siguientes palabras claves: </p>
+                                            <li>cat 1</li>
+                                            <li>cat 2</li>
+                                            <li>cat 3</li>
+                                            <li>cat 4</li>
+                                            <li>cat 5</li>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        </div> <!-- Fin de PANEL BODY --> 
+
+                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div> 
+
+                            </div> <!-- .panel-body -->
+
+                        <!-- 3er ACORDION -->   
+
+                         <div class="panel-group" id="accordion-1">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne-2">3. <i class="fa fa-usd fa-fw"></i> Precio de Venta</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne-2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <p><strong>Ingrese el precio de venta de su producto:</strong></p>
+                                            <div class="form-group col-lg-2">
+                                                <label>Moneda: *</label>
+                                                <select class="form-control form-control-mitad">
+                                                    <option>$U</option>
+                                                    <option>US$</option>
+                                                </select>
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Precio:</label>
+                                                <input class="form-control form-control-cuartaparte">
+                                                <p class="help-block">Puede tener en cuenta el precio sugerido en el panel de la derecha.</p>
+                                            </div>
+
+                                        </div> <!-- panel body -->
+                                    </div>
+                                </div>
+                            </div> <!-- Cierre de 3er ACORDION -->
+
+                         <!-- 4to ACORDION -->   
+
+                         <div class="panel-group" id="accordion-1">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne-3">4. <i class="fa fa-gavel fa-fw"></i> Confirmar Publicación</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne-3" class="panel-collapse collapse ">
+                                        <div class="panel-body">
+                                            <p><strong>Elige un tipo de publicación:</strong></p>
+                                            <div class="form-group col-lg-12">
+                                                <div class="table-responsive">
+                                                    <table class="table" style="text-align:center;">
+                                                        <thead>
+                                                            <tr>
+                                                                <th></th>
+                                                                <th>Exposición</th>
+                                                                <th>Exposición en la Página principal de vehículos</th>
+                                                                <th>Rotación en destacados de la Página principal</th>
+                                                                <th>Costo por publicar</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tr>
+                                                            <td><label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Plata</label></td>
+                                                            <td><i class="fa fa-user"></i><i class="fa fa-user"></i> Máxima</td>
+                                                            <td><i class="fa fa-times"></i></td>
+                                                            <td><i class="fa fa-times"></i></td>
+                                                            <td style="color:red; font-weight: bold;">$ 99 <br/><span style="font-size:10px;">¡Paga en Cuotas! </span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Gratis</label></td>
+                                                            <td><i class="fa fa-user"></i> <br/>Mínima</td>
+                                                            <td><i class="fa fa-times"></i></td>
+                                                            <td><i class="fa fa-times"></i></td>
+                                                            <td>¡Gratis!</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+
+                                            </div>
+                                            
+
+                                        </div> <!-- panel body -->
+                                    </div>
+                                </div>
+                            </div> <!-- Cierre de 4to ACORDION -->
+
+                        
+                    
+                        <!-- /.panel-body -->
+                        <button type="button" class="btn btn-primary">Confirmar Publicación</button>
+
+                               
+
+                            </form> <!-- fin de formulario -->
+
+                        
+
+                    </div>
+                    <!-- /.panel -->
+                    
+                    	<!-- BEGIN module_content -->
 	{module_content}
 	<!-- END module_content -->
+
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-8 -->
+                <div class="col-lg-4">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Estadísticas de la Categoría
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-car fa-fw"></i> Autos vendidos en MercadoLibre 
+                                    <span class="pull-right text-muted small"><em>5.350</em>
+                                    </span>
+                                    <p class="estad-tiempo">( en los últimos 6 meses )</p>
+                                    
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-car fa-fw"></i> Autos vendidos en tu categoría <span class="pull-right text-muted small"><em>150</em>
+                                    </span><p class="estad-tiempo">( en los últimos 6 meses )</p>
+                                    
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-car fa-fw"></i> Autos en tu categoría
+                                    <span class="pull-right text-muted small"><em>27</em>
+                                    </span><p class="estad-tiempo">( se están vendiendo ahora )</p>
+                                </a>
+                                
+                            </div>
+                            <!-- /.list-group -->
+                            
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <i class="fa fa-user fa-fw"></i> Definición de tu Público Objetivo
+                        </div> 
+                        <div class="panel-body">
+                            <p style="font-size:16px;">Muestreo genérico del público que más consulta, interviene y/o compra este tipo de producto.</p>
+                            <div id="morris-donut-chart" style="height: 250px;"></div>
+
+                            <hr/>
+       
+                            <div id="morris-area-chart"></div>
+                            <p style="font-size:10px;">Gráfica con la cantidad de ventas discriminada por el sexo y edad de los usuarios.</p>
+                            
+                        </div>
+
+                    </div>
+
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <i class="fa fa-usd fa-fw"></i> Precio de Venta Sugerido
+                        </div>
+                        <div class="panel-body">
+                            <p style="font-size:16px;">Se presenta una estimación basada en los números indicados y el rendimiento promedio de la categoría seleccionado.</p>
+                            <div class="espacio-superior">
+                                <span class="precio-sugerido-tit ">Precio de venta sugerido:</span>
+                                <p class="precio-sugerido">US$ 60.000</p>
+                            </div>
+                            <hr/>
+                            <p style="font-size:14px;">Tendrás un alcance potencial de: <strong>5.400 usuarios.</strong></p>
+                            <p style="font-size:14px;">Estimación del tiempo de venta: <strong>45 días.</strong></p>
+
+                            <hr/>
+
+                            <div>
+                                    <p>
+                                        <strong>Probabilidad de venta:</strong>
+                                        <span class="pull-right text-muted">65% Buena</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <i class="fa fa-dot-circle-o fa-fw"></i> Tipo de Venta
+                        </div>
+                        <div class="panel-body">
+                            <p>Tipo de venta sugerido: <strong>Precio Fijo</strong></p>
+                        </div>
+                    </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="bower_components/raphael/raphael-min.js"></script>
+    <script src="bower_components/morrisjs/morris.min.js"></script>
+    <script src="js/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="dist/js/sb-admin-2.js"></script>
+
 </body>
+
 </html>
