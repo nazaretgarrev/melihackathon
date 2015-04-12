@@ -64,6 +64,8 @@ function first_load(){
 			
 			brand    = {"name": $("#formMarca :selected").text(), "value": data[1]};
 			
+			$("#img_loading_bars").css("visibility", "visible");
+			
 			generate_donut_graph(category, brand);
 			generate_bar_graph(data[0]);
 			
@@ -98,6 +100,7 @@ function getCarsCategories(){
 		dataType:"json",
 		error:function(obj,cad,ex){
 			
+			$("#img_loading_categories").css("visibility", "hidden");
 			alert("Error al cargar las categorias");
 			
 		},success:function(datos){
@@ -125,6 +128,7 @@ function getCarsCategoriesBrands(IDCat){
 		dataType:"json",
 		error:function(obj,cad,ex){
 			
+			$("#img_loading_brands").css("visibility", "hidden");
 			alert("Error al cargar las marcas");
 		
 		},success:function(datos){
@@ -157,6 +161,7 @@ function getKeyWordsFromTrends(IDCat){
 		dataType:"json",
 		error:function(obj,cad,ex){
 			
+			$("#img_loading_keywords").css("visibility", "hidden");
 			alert("Error al cargar las palabras más buscadas")
 		
 		},success:function(datos){
@@ -209,12 +214,15 @@ function destroy_donut_graph(){
 
 function generate_bar_graph(IDCat){
 	
+	destroy_bars_graph();
+	
 	$.ajax({
 		url:"ajax.php",
 		data:{action:"get_lowest_and_highest", category_id:IDCat},
 		dataType:"json",
 		error:function(obj,cad,ex){
 			
+			$("#img_loading_bars").css("visibility", "hidden");
 			alert("Error al generar gráfico de promedio de precios")
 		
 		},success:function(datos){
@@ -242,6 +250,8 @@ function generate_bar_graph(IDCat){
 				]);
 				
 			}
+			
+			$("#img_loading_bars").css("visibility", "hidden");
 			
 		}
 	});

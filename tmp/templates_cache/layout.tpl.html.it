@@ -1,4 +1,4 @@
-a:4:{s:6:"blocks";a:1:{s:10:"__global__";s:20485:"<!DOCTYPE html>
+a:4:{s:6:"blocks";a:1:{s:10:"__global__";s:20645:"<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -637,6 +637,7 @@ class="pull-right text-muted small"><em>150</em> </span>
 <p style="font-size: 16px;">Muestreo general de la situación de su producto en el mercado.</p>
 <div id="morris-donut-chart" style="height: 250px;"></div>
 <hr />
+<p style="font-size: 16px;">Análisis de precios de la competencia&nbsp;&nbsp;<img id="img_loading_bars" src="img/loading.gif" style="visibility:hidden;"/></p>
 <div id="morris-bars-chart"></div>
 <p style="font-size: 10px;">Representación de su producto con base a precio y porcentaje de la oferta total.</p>
 </div>
