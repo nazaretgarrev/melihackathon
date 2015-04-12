@@ -1,7 +1,5 @@
 <?php
 
-	header($page_headers);
-
 	if($use_layout){
 		
 		$main_tpl = new HTML_Template_Sigma(TEMPLATES_PATH, TEMPLATES_CACHE_PATH);

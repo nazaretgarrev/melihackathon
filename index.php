@@ -15,10 +15,9 @@
 		
 	}
 	
-	require_once(get_module_name(_get("md")));
+	$md = get_module_name(_get("md"));
 	
-	log_message("HIT");
-	
+	require_once($md);
 	require_once("display.inc.php");
 	
 ?>

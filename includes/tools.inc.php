@@ -60,4 +60,24 @@
 		
 	}
 	
+	function get_array_from_object($object){
+		
+		return json_decode(utf8_encode(json_encode($object)), true);
+		
+	}
+	
+	function get_json($array){
+		
+		return json_encode($array);
+		
+	}
+	
+	function make_api_get_request($meli, $url, $parameters){
+	
+		$response = $meli->get($url, $parameters);
+	
+		return get_json(get_array_from_object($response["body"]));
+	
+	}
+	
 ?>
