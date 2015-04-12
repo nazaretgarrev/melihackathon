@@ -83,6 +83,9 @@
 			$similars = make_api_get_request($meli, $url, $parameters);
 			
 			$response  = array();
+			
+			$count     = count($similars["results"]);
+			$total     = 0;
 			$min_price = 0;
 			$max_price = 0;
 			
@@ -107,11 +110,14 @@
 					
 				}
 				
+				$total += $similar["price"];
+				
 			}
 			
-			$response["highest"] = $max_price;
-			$response["lowest"]  = $min_price;
-			$response["average"] = ceil(($response["lowest"] + $response["highest"]) / 2);
+			$response["highest"]          = $max_price;
+			$response["lowest"]           = $min_price;
+			$response["average"]          = ceil($total / $count);
+			$response["formated_average"] = number_format(ceil($total / $count));
 			
 			break;
 		

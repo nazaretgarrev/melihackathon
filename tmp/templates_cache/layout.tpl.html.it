@@ -1,4 +1,4 @@
-a:4:{s:6:"blocks";a:1:{s:10:"__global__";s:20645:"<!DOCTYPE html>
+a:4:{s:6:"blocks";a:1:{s:10:"__global__";s:20726:"<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -653,7 +653,7 @@ categoría seleccionado.</p>
 <div class="espacio-superior">
 <span class="precio-sugerido-tit ">Precio de venta
 sugerido:</span>
-<p class="precio-sugerido">US$ 60.000</p>
+<p class="precio-sugerido" id="p_suggested_price" style="visibility:hidden">US$ <span id="spn_suggested_price"></span></p>
 </div>
 <hr />
 <p style="font-size: 14px;">

@@ -27,6 +27,8 @@ function first_load(){
 			destroy_donut_graph();
 			destroy_bars_graph();
 			
+			load_suggested_price("");
+			
 		}else{
 		
 			$("#formMarca").attr("disabled", "disabled");
@@ -40,6 +42,8 @@ function first_load(){
 			update_quantities("[seleccione categoría]");
 			destroy_donut_graph();
 			destroy_bars_graph();
+			
+			load_suggested_price("");
 			
 		}
 		
@@ -77,6 +81,8 @@ function first_load(){
 			update_quantities(data[1]);
 			destroy_donut_graph();
 			destroy_bars_graph();
+			
+			load_suggested_price("");
 			
 		}
 		
@@ -251,6 +257,7 @@ function generate_bar_graph(IDCat){
 				
 			}
 			
+			load_suggested_price(datos.formated_average);
 			$("#img_loading_bars").css("visibility", "hidden");
 			
 		}
@@ -263,5 +270,20 @@ function destroy_bars_graph(){
 	if(_bars != ""){
 		_bars.setData([]);
 	}
+	
+}
+
+function load_suggested_price(value){
+	
+	var visibility = "hidden";
+	var html       = "";
+	
+	if(value !== ""){
+		visibility = "visible";
+	}
+	
+	$("#p_suggested_price").css("visibility", visibility);
+	$("#spn_suggested_price").html(value);
+	
 	
 }
