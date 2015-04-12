@@ -76,7 +76,7 @@
 	
 		$response = $meli->get($url, $parameters);
 	
-		return get_json(get_array_from_object($response["body"]));
+		return get_array_from_object($response["body"]);
 	
 	}
 	
