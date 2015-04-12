@@ -13,7 +13,13 @@
 	
 	}else{
 		
-		echo '<a href="' . $meli->getAuthUrl(AUTHORIZATOR_URL) . '">Login using MercadoLibre oAuth 2.0</a>';
+		$main_tpl = new HTML_Template_Sigma(TEMPLATES_PATH, TEMPLATES_CACHE_PATH);
+		$main_tpl->loadTemplateFile("authorizator.tpl.html");
+		
+		$main_tpl->setVariable("page_title", $page_title);
+		$main_tpl->setVariable("url_oauth2", $meli->getAuthUrl(AUTHORIZATOR_URL));
+		
+		$main_tpl->show();
 	
 	}
 	

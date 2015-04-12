@@ -1,3 +1,7 @@
+
+.navbar-brand{
+    padding: 5px 5px;
+}
 .navbar-default{
     background-color: #FFF059;
 }
@@ -79,4 +83,12 @@
 .precio-sugerido-tit{
     font-size: 15px;
     font-weight: bold;
+}
+
+.copyright{
+    font-size: 10px;
+    font-style: italic;
+    color: #999;
+    padding-bottom: 10px;
+
 }
