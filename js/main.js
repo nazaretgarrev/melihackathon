@@ -14,9 +14,12 @@ function first_load(){
 			update_quantities(data[1]);
 			
 			$("#img_loading_brands").css("visibility", "visible");
+			$("#img_loading_keywords").css("visibility", "visible");
+			
 			$("#formMarca").attr("disabled", "disabled");
 			
 			getCarsCategoriesBrands(idcat);
+			getKeyWordsFromTrends(idcat);
 			
 		}else{
 		
@@ -25,6 +28,8 @@ function first_load(){
 			
 			var appd = "<option value='' selected='selected'>Seleccione...</option>";
 			$("#formMarca").append(appd);
+		
+			$("#listKeywords").empty();
 			
 			update_quantities("[seleccione categoría]");
 			
@@ -61,22 +66,6 @@ function update_quantities($quantity){
 }
 
 // AJAX Callbacks Data API
-
-/*
-function getUserData()
-{
-	$.ajax({
-		url:"http://localhost/melihackathon/ajax.php?action=get_user_data",
-		dataType:"json",
-		error:function(obj,cad,ex){
-		},
-		success:function(datos)
-		{
-			
-		}
-	});
-}
-*/
 
 function getCarsCategories(){
 	
@@ -137,8 +126,32 @@ function getCarsCategoriesBrands(IDCat){
 	
 }
 
-
-
+function getKeyWordsFromTrends(IDCat){
+	
+	$.ajax({
+		url:"ajax.php",
+		data:{action:"get_category_trendings", category_id:IDCat},
+		dataType:"json",
+		error:function(obj,cad,ex){
+			
+			alert("Error al cargar las palabras más buscadas")
+		
+		},success:function(datos){
+			
+			var keywd = datos;
+			$("#listKeywords").empty();
+			
+			for(var k in keywd){
+				var appd = "<li>" + keywd[k] + "</li>";
+				$("#listKeywords").append(appd);
+			}
+			
+			$("#img_loading_keywords").css("visibility", "hidden");
+			
+		}
+	});
+	
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

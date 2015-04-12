@@ -166,7 +166,7 @@
 		case "get_category_trendings":
 			
 			$category_id = _get("category_id");
-			$url         = "/sites/MLU/trends/search?category=$category_id";
+			$url         = "/sites/MLU/trends/search?category=$category_id&limit=5";
 			$parameters  = array();
 			
 			$trendings = make_api_get_request($meli, $url, $parameters);
@@ -174,8 +174,8 @@
 			$response = array();
 				
 			foreach($trendings as $key => $trending){
-					
-				$response[] = $trending["keyword"];
+				
+				$response[] = ucfirst(str_ireplace("_", " ", $trending["keyword"]));
 				
 			}
 			

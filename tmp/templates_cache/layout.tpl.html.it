@@ -1,4 +1,4 @@
-a:4:{s:6:"blocks";a:2:{s:10:"__global__";s:20501:"<!DOCTYPE html>
+a:4:{s:6:"blocks";a:2:{s:10:"__global__";s:20633:"<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -251,6 +251,33 @@ Descripción del producto
 </div>
 <div id="collapseOne-1" class="panel-collapse collapse">
 <div class="panel-body">
+<div class="col-lg-8 espacio-superior">
+<div class="form-group ">
+<label>Título: *</label> <span><i class="fa fa-question-circle"></i></span>
+<p></p>
+<input class="form-control form-control"
+value="Ej: Volkswagen Golf Motor 2.0 2006 Azul, 5 puertas">
+<p class="help-block">Puedes ingresar hasta 60
+caracteres.</p>
+</div>
+<div class="form-group">
+<label>Descripción:</label>
+<textarea class="form-control" rows="3" cols=""></textarea>
+</div>
+</div>
+<div class="col-lg-4 espacio-superior">
+<div class="panel panel-warning">
+<div class="panel-heading">Palabras más buscadas en tu categoría&nbsp;&nbsp;<img id="img_loading_keywords" src="img/loading.gif" style="visibility:hidden;"/></div>
+<div class="panel-body">
+<p style="font-size: 11px;">
+Para el <strong>título</strong> se recomienda hacer uso de algunas de las siguientes palabras <u>que se adapten a su producto</u>:
+</p>
+<ol id="listKeywords"></ol>
+</div>
+</div>
+</div>
+</div>
+<div class="panel-body">
 <!-- /.panel-heading -->
 <div class="panel-body">
 <!-- <div id="morris-area-chart"></div>  -->
@@ -460,38 +487,6 @@ pintados</label>
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="col-lg-8 espacio-superior">
-<div class="form-group ">
-<label>Título: *</label> <span><i
-class="fa fa-question-circle"></i></span>
-<p></p>
-<input class="form-control form-control"
-value="Ej: Volkswagen Golf Motor 2.0 2006 Azul, 5 puertas">
-<p class="help-block">Puedes ingresar hasta 60
-caracteres.</p>
-</div>
-<div class="form-group">
-<label>Descripción:</label>
-<textarea class="form-control" rows="3" cols=""></textarea>
-</div>
-</div>
-<div class="col-lg-4 espacio-superior">
-<div class="panel panel-warning">
-<div class="panel-heading">Palabras claves
-sugeridas</div>
-<div class="panel-body">
-<p style="font-size: 11px;">
-Para el <strong>título</strong> se recomienda hacer
-uso de las siguientes palabras claves:
-</p>
-<li>cat 1</li>
-<li>cat 2</li>
-<li>cat 3</li>
-<li>cat 4</li>
-<li>cat 5</li>
 </div>
 </div>
 </div>
