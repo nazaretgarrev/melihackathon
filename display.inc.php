@@ -10,10 +10,6 @@
 		$main_tpl->setVariable("page_foot",     $page_foot);
 		$main_tpl->setVariable("page_onload",   $page_onload);
 		
-		$main_tpl->setCurrentBlock("module_content");
-			$main_tpl->setVariable("module_content", $module_content);
-		$main_tpl->parse("module_content");
-		
 		$main_tpl->show();
 		
 	}else{

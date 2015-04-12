@@ -1,3 +1,7 @@
+
+_donut = "";
+_bars  = "";
+
 function first_load(){
 	
 	$("#img_loading_categories").css("visibility", "visible");
@@ -20,6 +24,8 @@ function first_load(){
 			
 			getCarsCategoriesBrands(idcat);
 			getKeyWordsFromTrends(idcat);
+			destroy_donut_graph();
+			destroy_bars_graph();
 			
 		}else{
 		
@@ -32,6 +38,8 @@ function first_load(){
 			$("#listKeywords").empty();
 			
 			update_quantities("[seleccione categoría]");
+			destroy_donut_graph();
+			destroy_bars_graph();
 			
 		}
 		
@@ -46,12 +54,27 @@ function first_load(){
 			
 			update_quantities(data[1]);
 			
+			var data  = $("#formCategoria").val().split("-");
+			var idcat = data[0];
+			
+			category = {"name": $("#formCategoria :selected").text(), "value": data[1]};
+			
+			var data  = $("#formMarca").val().split("-");
+			var idcat = data[0];
+			
+			brand    = {"name": $("#formMarca :selected").text(), "value": data[1]};
+			
+			generate_donut_graph(category, brand);
+			generate_bar_graph(data[0]);
+			
 		}else{
 			
 			var data  = $("#formCategoria").val().split("-");
 			var idcat = data[0];
 			
 			update_quantities(data[1]);
+			destroy_donut_graph();
+			destroy_bars_graph();
 			
 		}
 		
@@ -153,62 +176,82 @@ function getKeyWordsFromTrends(IDCat){
 	
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/*
-
-
-var accion_usuario = function(){
-	'operacionToFrontend':function(e,div){
-		if(e is 'hover' and div is '$elDiv')
-		{
-			this.eventos_accion.hover_form_precioauto();
-			//...
-		}
-	}
-	'eventos_accion':{
-		'hover_form_precioauto':function()
-		{
-			// Devuelve resultado de autos similares
-			resultado_autos.
-		}
-	}
-}
-
-var resultado_autos = function()
-{
-	'lista_autos':[],
-	'':function(){
-		$.ajax({
-			// Recurso
-			(function(){
-				new auto_similar(...);
-			})();
+function generate_donut_graph(category, brand){
+	
+	if(_donut == ""){
+		
+		_donut = Morris.Donut({
+		  element: 'morris-donut-chart',
+		  data: [
+		    {label: category.name, value: category.value},
+		    {label: brand.name, value: brand.value}
+		  ]
 		});
-	},
-	'ordenar':function(tipoOrden){
-		this.lista_autos.sort(function(){
-			//tipoOrden
-		});
-		return this.lista_autos;
+		
+	}else{
+		
+		_donut.setData([
+		    {label: category.name, value: category.value},
+		    {label: brand.name, value: brand.value}
+		]);
+		
 	}
-	'metricas':function(tipoData){
-
-	}
-
+	
 }
 
-var auto_similar = function(automovil,datos...){
-	'data_desc':{
-		'precio':0000,
-		'marca':'',
-		'modelo':'',
-		// Tiene GPS? , tiene radio? ...
+function destroy_donut_graph(){
+	
+	if(_donut != ""){
+		_donut.setData([]);
 	}
-
+	
 }
 
-*/
+function generate_bar_graph(IDCat){
+	
+	$.ajax({
+		url:"ajax.php",
+		data:{action:"get_lowest_and_highest", category_id:IDCat},
+		dataType:"json",
+		error:function(obj,cad,ex){
+			
+			alert("Error al generar gráfico de promedio de precios")
+		
+		},success:function(datos){
+			
+			if(_bars == ""){
+				
+				_bars = Morris.Bar({
+					  element: 'morris-bars-chart',
+					  data: [
+					    { x: 'menor', y: datos.lowest},
+					    { x: 'promedio', y: datos.average},
+					    { x: 'mayor', y: datos.highest}
+					  ],
+					  xkey: 'x',
+					  ykeys: ['y'],
+					  labels: ['Precio']
+					});
+				
+			}else{
+				
+				_bars.setData([
+				    { x: 'menor', y: datos.lowest},
+				    { x: 'promedio', y: datos.average},
+				    { x: 'mayor', y: datos.highest}
+				]);
+				
+			}
+			
+		}
+	});
+	
+}
 
-
-
+function destroy_bars_graph(){
+	
+	if(_bars != ""){
+		_bars.setData([]);
+	}
+	
+}

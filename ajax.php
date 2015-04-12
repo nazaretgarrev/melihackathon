@@ -97,17 +97,21 @@
 				
 				if($min_price > $similar["price"]){
 					
-					$response["lowest"] = $similar;
+					$min_price = $similar["price"];
 					
 				}
 				
 				if($max_price < $similar["price"]){
 					
-					$response["highest"] = $similar;
+					$max_price = $similar["price"];
 					
 				}
 				
 			}
+			
+			$response["highest"] = $max_price;
+			$response["lowest"]  = $min_price;
+			$response["average"] = ceil(($response["lowest"] + $response["highest"]) / 2);
 			
 			break;
 		
@@ -180,7 +184,40 @@
 			}
 			
 			break;
+
+		case "get_price_distribution":
+			
+			$category_id = _get("category_id");
+			$url         = "/sites/MLU/search?category=$category_id";
+			$parameters  = array();
 				
+			$similars = make_api_get_request($meli, $url, $parameters);
+				
+			$response  = array();
+			
+			foreach($similars["results"] as $key => $similar){
+			
+				if(!isset($response[$similar["price"]])){
+					$response[$similar["price"]] = 1;
+				}else{
+					$response[$similar["price"]] += 1;
+				}
+			
+			}
+
+			$return = array();
+			
+			foreach($response as $key => $value){
+				
+				$return[] = array(
+					"x" => $key,
+					"y" => $value
+				);
+				
+			}
+			
+			break;
+			
 	}
 	
 	header("Content-Type: application/json");

@@ -667,10 +667,6 @@
 					</div>
 					<!-- /.panel -->
 
-					<!-- BEGIN module_content -->
-					{module_content}
-					<!-- END module_content -->
-
 					<!-- /.panel -->
 				</div>
 				<!-- /.col-lg-8 -->
@@ -706,19 +702,18 @@
 					<!-- /.panel -->
 					<div class="panel panel-info">
 						<div class="panel-heading">
-							<i class="fa fa-user fa-fw"></i> Definición de tu Público
-							Objetivo
+							<i class="fa fa-user fa-fw"></i> Mini-Análisis de mercado
 						</div>
 						<div class="panel-body">
-							<p style="font-size: 16px;">Muestreo genérico del público que
-								más consulta, interviene y/o compra este tipo de producto.</p>
+							<p style="font-size: 16px;">Muestreo general de la situación de su producto en el mercado.</p>
+							
 							<div id="morris-donut-chart" style="height: 250px;"></div>
 
 							<hr />
 
-							<div id="morris-area-chart"></div>
-							<p style="font-size: 10px;">Gráfica con la cantidad de ventas
-								discriminada por el sexo y edad de los usuarios.</p>
+							<div id="morris-bars-chart"></div>
+							
+							<p style="font-size: 10px;">Representación de su producto con base a precio y porcentaje de la oferta total.</p>
 
 						</div>
 
@@ -797,8 +792,7 @@
 
 	<!-- Morris Charts JavaScript -->
 	<script src="bower_components/raphael/raphael-min.js" type="text/javascript"></script>
-	<!-- <script src="bower_components/morrisjs/morris.min.js" type="text/javascript"></script> -->
-	<!-- <script src="js/morris-data.js" type="text/javascript"></script> -->
+	<script src="bower_components/morrisjs/morris.min.js" type="text/javascript"></script>
 
 	<!-- Custom Theme JavaScript -->
 	<script src="dist/js/sb-admin-2.js" type="text/javascript"></script>
